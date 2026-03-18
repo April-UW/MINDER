@@ -14,8 +14,9 @@ from torch import nn
 import torch.distributed as dist
 
 from transformers import LogitsProcessor, BeamScorer, BeamSearchScorer, LogitsProcessorList, StoppingCriteriaList, HammingDiversityLogitsProcessor
-from transformers.generation_utils import BeamSearchOutput, validate_stopping_criteria, BeamSearchEncoderDecoderOutput, BeamSearchDecoderOnlyOutput
-from transformers.generation_logits_process import TopKLogitsWarper
+from transformers.generation.utils import BeamSearchOutput, BeamSearchEncoderDecoderOutput, BeamSearchDecoderOnlyOutput
+from transformers.generation import validate_stopping_criteria
+from transformers import TopKLogitsWarper
 
 from seal.index import FMIndex
 
