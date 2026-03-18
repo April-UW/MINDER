@@ -43,6 +43,7 @@ class FMIndex(_FMIndex):
             sequences: An iterable of list of integers, e.g. token ids.
             in_memory: If False, builds the FM-index using a temporary cache file
         """
+        logger.log(logging.WARN, f"in_memory: {in_memory}")
         occurring = set()
         if in_memory:
             data = []
