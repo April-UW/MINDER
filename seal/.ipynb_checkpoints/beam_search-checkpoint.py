@@ -13,9 +13,11 @@ import torch
 from torch import nn
 import torch.distributed as dist
 
-from transformers import LogitsProcessor, BeamScorer, BeamSearchScorer, LogitsProcessorList, StoppingCriteriaList, HammingDiversityLogitsProcessor
+from transformers import LogitsProcessor, LogitsProcessorList, StoppingCriteriaList
+from transformers.generation import HammingDiversityLogitsProcessor
 from transformers.generation.utils import BeamSearchOutput, BeamSearchEncoderDecoderOutput, BeamSearchDecoderOnlyOutput
 from transformers.generation import validate_stopping_criteria
+from transformers.generation import BeamScorer, BeamSearchScorer
 from transformers import TopKLogitsWarper
 
 from seal.index import FMIndex
