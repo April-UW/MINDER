@@ -44,7 +44,7 @@ class MsmarcoQueryIterator(QueryIterator):
     def from_topics(cls, topics_path: str):
         topics = {}
         order = []
-        data = load_dataset(topics_path, split="dev")
+        data = load_dataset(topics_path, split="validation")
         num = 0
         for instance in data:
             topics[int(instance['query_id'])] = instance
